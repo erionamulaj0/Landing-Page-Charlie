@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@1,700&family=Titan+One&display=swap');
+
+    {
+      padding: 0;
+      margin: 0;
+    }
+
+    html {
+      background-color: gray;
+      scroll-behavior: smooth;
+    }
+
+    h1 {
+      font-family: 'Titan One', 'Times New Roman', Times, serif;
+      font-size: 48px;
+      font-weight: 800;
+    }
+
+    a {
+      color: black;
+    }
+
+    p {
+      color: whitesmoke;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      position: fixed;
+      background-color: rgb(250, 250, 250);
+    }
+
+    .header-logo {
+      height: 36px;
+      margin-left: 24px;
+      border: 4px solid lightsteelblue;
+      border-radius: 50%;
+      box-shadow: 1px 1px;
+    }
+
+    .header-logo:hover {
+      border: 4px solid lavenderblush;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      list-style: none;
+      margin-left: auto;
+      margin-right: 12px;
+
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      display: block;
+      font-size: 20px;
+      padding: 16px;
+    }
+
+    .nav-links a:hover {
+      background-color: papayawhip;
+      cursor: pointer;
+    }
+
+
+
+    .title-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: linear-gradient(60deg,
+          rgba(57, 60, 90, 0.85),
+          rgba(180, 180, 120, 0.5)),
+        url(https://variety.com/wp-content/uploads/2020/10/Charlie-Chaplin.jpg?w=681&h=383&crop=1);
+      background-position: center;
+      background-size: cover;
+    }
+
+    .media-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 128px 72px 72px;
+      gap: 24px;
+      padding: 32px;
+      border: 3px solid skyblue;
+      border-radius: 200px;
+      box-shadow: 2px 2px 20px 2px;
+      background: rgba(57, 60, 90, 0.7);
+    }
+
+    .textbox {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      align-items: flex-start;
+      gap: 20px;
+      padding-left: 32px;
+    }
+
+    .textbox h1 {
+      color: silver;
+      text-shadow: 2px 2px black;
+    }
+
+    .main-img {
+      object-fit: cover;
+      flex: 1 1 auto;
+      max-width: 300px;
+      border: 15px solid lightblue;
+      border-radius: 50%;
+      box-shadow: 2px 2px 3px;
+    }
+
+    .join-button {
+      font-weight: 900;
+      padding: 4px 24px;
+      border-radius: 4px;
+      background-color: rgb(230, 250, 250);
+    }
+
+    .join-button:hover {
+      cursor: pointer;
+      background-color: lightblue;
+      box-shadow: 1px 1px burlywood;
+    }
+
+
+    .team-title {
+      color: white;
+      text-shadow: 2px 2px black;
+      text-align: center;
+      padding: 96px 0 48px;
+    }
+
+    .biography-info {
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
+      gap: 48px;
+      padding-bottom: 128px;
+    }
+
+    .biography-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+
+    .biography-info-text {
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      flex-wrap: wrap;
+      max-width: 200px;
+    }
+
+
+    .quote-section {
+      display: flex;
+      flex-direction: column;
+      padding: 128px 192px 96px;
+      background-color: cadetblue;
+      font-size: 24px;
+      line-height: 150%;
+      font-style: italic;
+    }
+
+    .quote-section p {
+      text-align: end;
+      font-style: normal;
+      font-weight: 600;
+      color: silver;
+    }
+
+
+    .signup-section {
+      display: flex;
+      align-items: center;
+      background-color: silver;
+      border: 12px solid silver;
+      border-radius: 24px;
+      box-shadow: 2px 2px 3px black;
+      margin: 128px auto;
+      padding: 32px 48px;
+      max-width: 1100px;
+    }
+
+    .email-text h2 {
+      color: cadetblue;
+      text-shadow: 1px 1px black;
+      font-family: 'Titan One', Arial, Helvetica, sans-serif;
+      padding-bottom: 8px;
+    }
+
+    .email-text p {
+      padding-right: 24px;
+    }
+
+    .email-btn {
+      flex-shrink: 0;
+      height: 36px;
+      width: 128px;
+      padding: 4px 24px;
+      margin: 24px auto;
+      background-color: rgb(230, 250, 250);
+      border-radius: 4px;
+      border: 3px solid lightblue;
+      box-shadow: 2px 2px 3px black;
+      font-weight: 400;
+    }
+
+    .email-btn:hover {
+      font-weight: 800;
+      background-color: skyblue;
+      border-color: steelblue;
+      cursor: pointer;
+    }
+
+    footer p {
+      padding: 24px;
+      text-align: center;
+      color: black;
+      background-color: steelblue;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <a href="#title"><img class="header-logo" src="ch.jpg" /></a>
+    <ul class="nav-links">
+      <li><a href="#biography-info">Biography</a></li>
+      <li><a href="#quote-section">Quote</a></li>
+      <li><a href="#signup-section">Contact Us</a></li>
+    </ul>
+  </nav>
+  <div class="page-wrapper">
+    <div id="title" class="title-section">
+      <div class="media-box">
+        <div class="textbox">
+          <h1>Charlie Chaplin</h1>
+          <p>
+            Sir Charles Spencer Chaplin Jr. KBE (16 April 1889 – 25 December 1977) was an English comic actor,
+            filmmaker, and composer who rose to fame in the era of silent film. He became a worldwide icon through his
+            screen persona, the Tramp, and is considered one of the most important figures in the history of the film
+            industry. His career spanned more than 75 years, from childhood in the Victorian era until a year before his
+            death in 1977, and encompassed both adulation and controversy.
+          </p>
+          <button class="join-button">Join</button>
+        </div>
+        <img class="main-img" src="charliechapli.jpg" />
+      </div>
+    </div>
+    <div id="biography-info" class="biography-info">
+      <h1 class="biography-tittle">Life of Charlie Chaplin!</h1>
+
+      <div class="biography-info">
+        <p>harles Spencer Chaplin was born on 16 April 1889 to Hannah Chaplin (née Hill) and Charles Chaplin Sr., both
+          of whom had Romanichal heritage. There is no official record of his birth, although Chaplin believed he was
+          born at East Street, Walworth, in South London. His parents had married four years previously, at which time
+          Charles Sr. became the legal guardian of Hannah's illegitimate son, Sydney John Hill.At the time of his birth,
+          Chaplin's parents were both music hall entertainers. Hannah, the daughter of a shoemaker, had a brief and
+          unsuccessful career under the stage name Lily Harley, while Charles Sr., a butcher's son, was a popular
+          singer.Although they never divorced, Chaplin's parents were estranged by around 1891. The following year,
+          Hannah gave birth to a third son, George Wheeler Dryden, fathered by the music hall entertainer Leo Dryden.
+          The child was taken by Dryden at six months old, and did not re-enter Chaplin's life for thirty
+          years.Chaplin's childhood was fraught with poverty and hardship, making his eventual trajectory "the most
+          dramatic of all the rags to riches stories ever told" according to his authorised biographer David
+          Robinson.Chaplin's early years were spent with his mother and brother Sydney in the London district of
+          Kennington; Hannah had no means of income, other than occasional nursing and dressmaking, and Chaplin Sr.
+          provided no financial support. As the situation deteriorated, Chaplin was sent to Lambeth Workhouse when he
+          was seven years old. The council housed him at the Central London District School for paupers, which Chaplin
+          remembered as "a forlorn existence".He was briefly reunited with his mother 18 months later, before Hannah was
+          forced to readmit her family to the workhouse in July 1898. The boys were promptly sent to Norwood Schools,
+          another institution for destitute children.<em>For more you can click</em> <a
+            href="https://en.wikipedia.org/wiki/Charlie_Chaplin">Charlie Chaplin's life</a></p>
+
+      </div>
+      <div id="quote-section" class="quote-section">
+        <div class="quote">
+          <p>“I'm sorry, but I don't want to be an emperor. That's not my business. I don't want to rule or conquer
+            anyone. I should like to help everyone if possible; Jew, Gentile, black man, white. We all want to help one
+            another. Human beings are like that. We want to live by each other's happiness, not by each other's misery.
+            We don't want to hate and despise one another. In this world there is room for everyone, and the good earth
+            is rich and can provide for everyone. The way of life can be free and beautiful, but we have lost the way.
+            Greed has poisoned men's souls, has barricaded the world with hate, has goose-stepped us into misery and
+            bloodshed. We have developed speed, but we have shut ourselves in. Machinery that gives abundance has left
+            us in want. Our knowledge has made us cynical; our cleverness, hard and unkind. We think too much and feel
+            too little. More than machinery, we need humanity. More than cleverness, we need kindness and gentleness.
+            Without these qualities, life will be violent and all will be lost. The airplane and the radio have brought
+            us closer together. The very nature of these inventions cries out for the goodness in men; cries out for
+            universal brotherhood; for the unity of us all. Even now my voice is reaching millions throughout the world,
+            millions of despairing men, women, and little children, victims of a system that makes men torture and
+            imprison innocent people. To those who can hear me, I say, do not despair. The misery that is now upon us is
+            but the passing of greed, the bitterness of men who fear the way of human progress. The hate of men will
+            pass, and dictators die, and the power they took from the people will return to the people. And so long as
+            men die, liberty will never perish. Soldiers! Don't give yourselves to brutes, men who despise you, enslave
+            you; who regiment your lives, tell you what to do, what to think and what to feel! Who drill you, diet you,
+            treat you like cattle, use you as cannon fodder. Don't give yourselves to these unnatural men - machine men
+            with machine minds and machine hearts! You are not machines, you are not cattle, you are men! You have the
+            love of humanity in your hearts! You don't hate! Only the unloved hate; the unloved and the unnatural.
+            Soldiers! Don't fight for slavery! Fight for liberty! In the seventeenth chapter of St. Luke, it is written
+            that the kingdom of God is within man, not one man nor a group of men, but in all men! In you! You, the
+            people, have the power, the power to create machines, the power to create happiness! You, the people, have
+            the power to make this life free and beautiful, to make this life a wonderful adventure. Then in the name of
+            democracy, let us use that power. Let us all unite. Let us fight for a new world, a decent world that will
+            give men a chance to work, that will give youth a future and old age a security. By the promise of these
+            things, brutes have risen to power. But they lie! They do not fulfill that promise. They never will!
+            Dictators free themselves but they enslave the people. Now let us fight to fulfill that promise. Let us
+            fight to free the world! To do away with national barriers! To do away with greed, with hate and
+            intolerance! Let us fight for a world of reason, a world where science and progress will lead to all men's
+            happiness. Soldiers, in the name of democracy, let us all unite!”</p>
+          <div id="signup-section" class="signup-section">
+
+            <div class="email-text">
+              <h2>Do you want to laugh?</h2>
+              <p>
+                Then watch his movies!!!
+              </p>
+            </div>
+            <button class="email-btn">Email me!</button>
+          </div>
+          <footer>
+            <p>Copyright © <a target="_blank" href="https://www.theodinproject.com/">The Odin Landing Page Project</a>
+              <a href="https://en.wikipedia.org/wiki/Charlie_Chaplin">Charlie Chaplin's life</a>& <a
+                href=" https://www.goodreads.com/author/quotes/48136.Charlie_Chaplin">Qoutes from Charlie Chaplin</a>
+          </footer>
+        </div>
+</body>
+
+</html>
